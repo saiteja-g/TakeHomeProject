@@ -63,3 +63,9 @@ npm start
 - Navigate to `http://localhost:3000`.
 - Select a start and end date to visualize the machine states.
 - The chart displays the machine's operational status within the selected timeframe.
+
+## Demo
+
+This project includes an end-to-end demo showcasing the machine state visualization tool in action. Follow the steps in the [Running the Project](#running-the-project) section to start the application and backend server.
+
+A video demonstration of the project can also be found [here](https://drive.google.com/file/d/1oMr28b2V9Ex8-RnRuC1FnxXU6ROF2K0z).
