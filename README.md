@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Machine State Visualization Tool
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project provides an intuitive user interface for visualizing the states of machinery over a given period. By analyzing power draw data (`Psum`) from equipment, users can determine when a machine is off, on but unloaded, idle, or loaded. This aims to help users understand equipment utilization, tool change times, and identify opportunities for efficiency improvement.
 
-## Available Scripts
+## Features
+- **State Visualization**: Displays machine states (Off, On-Unloaded, On-Idle, On-Loaded) based on `Psum` values.
+- **Period Selection**: Allows users to select a specific period for analysis.
+- **Efficiency Insights**: Offers insights into equipment utilization and suggestions for efficiency improvements.
 
-In the project directory, you can run:
+## Technologies Used
+- **Frontend**: React
+- **Chart Library**: Chart.js
+- **Backend**: Node.js
+- **Data Storage**: Demo data processed from `demoPumpDayData.csv`
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
+- Node.js
+- npm 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
+1. Clone the repository:
+https://github.com/saiteja-g/TakeHomeProject.git
 
-### `npm test`
+2. Navigate to the project directory:
+cd path/to/project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Install dependencies:
+  - For backend (it's in a directory named `backend`):
+  ```
+  cd ../backend
+  npm install
+  ```
 
-### `npm run build`
+  - For frontend (it's in a directory named `frontend`):
+  ```
+  cd frontend
+  npm install
+  ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Running the Project
+1. Start the backend server:
+cd ../backend
+node server.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- The server will run on `http://localhost:5000` by default.
+2. Start the frontend application:
+cd ../frontend
+npm start
 
-### `npm run eject`
+- The application will open on `http://localhost:3000` by default.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## API Specification
+- **GET `/api/machine-states`**: Fetches machine states for a given period.
+- **Parameters**:
+ - `startDate`: Start of the period.
+ - `endDate`: End of the period.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Usage
+- Navigate to `http://localhost:3000`.
+- Select a start and end date to visualize the machine states.
+- The chart displays the machine's operational status within the selected timeframe.
