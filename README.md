@@ -22,15 +22,17 @@ This project provides an intuitive user interface for visualizing the states of 
 
 ### Installation
 1. Clone the repository:
-https://github.com/saiteja-g/TakeHomeProject.git
+  https://github.com/saiteja-g/TakeHomeProject.git
 
 2. Navigate to the project directory:
-cd path/to/project
+  ```
+  cd path/to/project
+  ```
 
 3. Install dependencies:
   - For backend (it's in a directory named `backend`):
   ```
-  cd ../backend
+  cd backend
   npm install
   ```
 
@@ -43,21 +45,23 @@ cd path/to/project
 
 ### Running the Project
 1. Start the backend server:
-cd ../backend
-node server.js
-
+    ```
+    cd ../backend
+    node server.js
+    ```
 - The server will run on `http://localhost:5000` by default.
 2. Start the frontend application:
-cd ../frontend
-npm start
-
+    ```
+    cd ../frontend
+    npm start
+    ```
 - The application will open on `http://localhost:3000` by default.
 
 ## API Specification
 - **GET `/api/machine-states`**: Fetches machine states for a given period.
 - **Parameters**:
- - `startDate`: Start of the period.
- - `endDate`: End of the period.
+   - `startDate`: Start of the period.
+   - `endDate`: End of the period.
 
 ## Usage
 - Navigate to `http://localhost:3000`.
